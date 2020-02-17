@@ -11,7 +11,8 @@ ARG GID=1000
 RUN \
   addgroup -g $GID ruby && \
   adduser -u $UID -G ruby -D ruby && \
-  apk --no-cache --update add build-base libffi-dev
+  apk --no-cache --update add build-base libffi-dev && \
+  ln -sf /dev/stdout /var/log/transmission-rss.log
 
 WORKDIR home/ruby
 COPY . transmission-rss
