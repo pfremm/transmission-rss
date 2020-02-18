@@ -26,5 +26,5 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/arm64 \
-            --output "type=image,push=false" \
-            --tag pfremm/transmission-rss .
+            --push \
+            --tag pfremm/transmission-rss:arm64 .
