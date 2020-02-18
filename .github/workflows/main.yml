@@ -18,7 +18,7 @@ jobs:
       -
         name: Docker login
         run: |
-          docker login -u pfremm -p with ${DOCKER_PASSWORD} hub.docker.com
+          docker login -u pfremm -p ${DOCKER_PASSWORD} hub.docker.com
         env:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB }}
       -
