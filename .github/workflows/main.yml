@@ -16,8 +16,11 @@ jobs:
         with:
           version: latest
       -
-        name: Available platforms
-        run: echo ${{ steps.buildx.outputs.platforms }}
+        name: Docker login
+        run: |
+          docker login -u pfremm -p with ${DOCKER_PASSWORD}
+        env:
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB }}
       -
         name: Run Buildx
         run: |
