@@ -8,4 +8,5 @@ group :test do
   gem 'rspec'
   gem 'vcr'
   gem 'webmock'
+  gem "ffi", "< 1.17.0"
 end
